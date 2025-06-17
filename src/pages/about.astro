@@ -1,0 +1,359 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="About Us - LetsGathr" description="Learn about LetsGathr's mission to bring together culture, elegance, and ethical lifestyle through immersive events.">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1>Our Story</h1>
+        <p>Where tradition meets innovation in the world of curated experiences</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Story -->
+  <section class="brand-story section-padding">
+    <div class="container">
+      <div class="story-content glass fade-in">
+        <h2>How LetsGathr Began</h2>
+        <p>Born from a passion for meaningful connections and cultural celebration, LetsGathr emerged as a response to the growing need for authentic, sustainable, and socially conscious events. We recognized that today's consumers seek more than just shopping experiences—they desire connections, stories, and purpose.</p>
+        
+        <p>Our journey started with a simple belief: that every gathering should be a celebration of culture, creativity, and community. We bring together the finest artisans, sustainable brands, and conscious consumers in spaces that honor tradition while embracing innovation.</p>
+        
+        <p>Through carefully curated exhibitions, we create platforms where heritage crafts meet contemporary design, where ethical brands find their voice, and where every attendee leaves with not just products, but stories and connections that last a lifetime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="mission-vision section-padding">
+    <div class="container">
+      <div class="mv-grid">
+        <div class="mv-card glass-strong fade-in">
+          <div class="mv-icon">🎯</div>
+          <h3>Our Mission</h3>
+          <p>To create immersive, culturally rich experiences that celebrate tradition, promote sustainability, and foster meaningful connections between conscious consumers and ethical brands.</p>
+        </div>
+        
+        <div class="mv-card glass-strong fade-in">
+          <div class="mv-icon">👁️</div>
+          <h3>Our Vision</h3>
+          <p>To become India's leading platform for sustainable luxury events, where every gathering contributes to preserving cultural heritage while building a more conscious future.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Deep Dive -->
+  <section class="values-detail section-padding">
+    <div class="container">
+      <h2 class="section-title fade-in">What Drives Us</h2>
+      
+      <div class="values-detailed">
+        <div class="value-detailed glass fade-in">
+          <div class="value-header">
+            <div class="value-icon-large">🌱</div>
+            <h3>Sustainability at Heart</h3>
+          </div>
+          <p>Every event we curate prioritizes environmental responsibility. From selecting eco-conscious brands to implementing zero-waste practices, we ensure that celebration doesn't come at the cost of our planet. Our partnerships exclusively feature brands committed to sustainable production, ethical sourcing, and circular economy principles.</p>
+        </div>
+        
+        <div class="value-detailed glass fade-in">
+          <div class="value-header">
+            <div class="value-icon-large">✨</div>
+            <h3>Experience Design Excellence</h3>
+          </div>
+          <p>We believe in crafting multi-sensory experiences that go beyond traditional exhibitions. Our events feature carefully designed spaces, curated soundscapes, aromatic elements, and interactive installations that create lasting memories. Every detail is intentionally planned to tell a story and evoke emotion.</p>
+        </div>
+        
+        <div class="value-detailed glass fade-in">
+          <div class="value-header">
+            <div class="value-icon-large">🤝</div>
+            <h3>Community-Centric Approach</h3>
+          </div>
+          <p>Our events serve as bridges connecting diverse communities—artisans with urban consumers, traditional crafts with contemporary markets, and like-minded individuals with shared values. We foster spaces where conversations flow, collaborations bloom, and long-term relationships are built.</p>
+        </div>
+        
+        <div class="value-detailed glass fade-in">
+          <div class="value-header">
+            <div class="value-icon-large">🏛️</div>
+            <h3>Cultural Preservation</h3>
+          </div>
+          <p>We are committed to celebrating and preserving India's rich cultural heritage through our events. By providing platforms for traditional artisans and craftspeople, we ensure that age-old techniques and cultural practices continue to thrive in contemporary contexts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="our-process section-padding">
+    <div class="container">
+      <h2 class="section-title fade-in">Our Curation Process</h2>
+      
+      <div class="process-steps">
+        <div class="process-step fade-in">
+          <div class="step-number">01</div>
+          <div class="step-content glass">
+            <h4>Concept Development</h4>
+            <p>Every event begins with a meaningful theme that resonates with current cultural moments and social consciousness.</p>
+          </div>
+        </div>
+        
+        <div class="process-step fade-in">
+          <div class="step-number">02</div>
+          <div class="step-content glass">
+            <h4>Brand Selection</h4>
+            <p>We carefully vet and select brands that align with our values of sustainability, quality, and ethical practices.</p>
+          </div>
+        </div>
+        
+        <div class="process-step fade-in">
+          <div class="step-number">03</div>
+          <div class="step-content glass">
+            <h4>Experience Design</h4>
+            <p>Our team designs immersive environments that enhance storytelling and create memorable interactions.</p>
+          </div>
+        </div>
+        
+        <div class="process-step fade-in">
+          <div class="step-number">04</div>
+          <div class="step-content glass">
+            <h4>Community Building</h4>
+            <p>We foster connections before, during, and after events through thoughtful programming and follow-up initiatives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .about-hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)),
+      url('https://images.pexels.com/photos/1389460/pexels-photo-1389460.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover;
+    filter: blur(1px);
+    z-index: -1;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 120px 0 60px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .hero-content p {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    color: #666;
+  }
+
+  .story-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    text-align: center;
+  }
+
+  .story-content h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #2c2c2c;
+    margin-bottom: 40px;
+  }
+
+  .story-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .mv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .mv-card {
+    padding: 50px 40px;
+    text-align: center;
+  }
+
+  .mv-icon {
+    font-size: 4rem;
+    margin-bottom: 30px;
+  }
+
+  .mv-card h3 {
+    font-size: 2rem;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+  }
+
+  .mv-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: #2c2c2c;
+    margin-bottom: 60px;
+  }
+
+  .values-detailed {
+    display: grid;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .value-detailed {
+    padding: 40px;
+  }
+
+  .value-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .value-icon-large {
+    font-size: 3rem;
+    flex-shrink: 0;
+  }
+
+  .value-detailed h3 {
+    font-size: 1.8rem;
+    color: #2c2c2c;
+    margin: 0;
+  }
+
+  .value-detailed p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+  }
+
+  .process-steps {
+    display: grid;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .process-step {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .step-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #667eea;
+    font-family: 'Playfair Display', serif;
+    flex-shrink: 0;
+    width: 80px;
+    text-align: center;
+  }
+
+  .step-content {
+    flex: 1;
+    padding: 30px;
+  }
+
+  .step-content h4 {
+    font-size: 1.5rem;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+  }
+
+  .step-content p {
+    color: #666;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      padding: 100px 0 40px;
+    }
+
+    .story-content {
+      padding: 40px 20px;
+    }
+
+    .mv-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .mv-card {
+      padding: 40px 30px;
+    }
+
+    .values-detailed {
+      gap: 30px;
+    }
+
+    .value-detailed {
+      padding: 30px 20px;
+    }
+
+    .value-header {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+
+    .process-step {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .step-number {
+      width: auto;
+    }
+
+    .step-content {
+      padding: 20px;
+    }
+  }
+</style>
+</Layout>

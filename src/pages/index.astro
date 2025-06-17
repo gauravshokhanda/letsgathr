@@ -1,0 +1,306 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="LetsGathr - Curation Meets Celebration">
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1>LetsGathr</h1>
+        <p class="tagline">Curation Meets Celebration</p>
+        <p class="subtitle">Elite event curation combining luxury experiences with social consciousness and Indian tradition</p>
+        <div class="hero-buttons">
+          <a href="/events" class="btn-primary">View Events</a>
+          <a href="/contact" class="btn-secondary">Become a Partner</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="about-preview section-padding">
+    <div class="container">
+      <div class="about-content glass fade-in">
+        <h2>Crafting Unforgettable Experiences</h2>
+        <p>We bring together culture, elegance, and ethical lifestyle through immersive events that celebrate tradition while embracing modern luxury. Each gathering is thoughtfully curated to create meaningful connections and lasting memories.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Events -->
+  <section class="featured-events section-padding">
+    <div class="container">
+      <h2 class="section-title fade-in">Featured Events</h2>
+      <div class="events-grid">
+        <div class="event-card glass-strong fade-in">
+          <div class="event-image">
+            <img src="https://images.pexels.com/photos/6069114/pexels-photo-6069114.jpeg?auto=compress&cs=tinysrgb&w=800" alt="The Rakhi Edit Event" />
+          </div>
+          <div class="event-content">
+            <h3>The Rakhi Edit - Ties That Matter</h3>
+            <p class="event-date">July 26-27 (Bangalore) • Aug 2-3 (Pune)</p>
+            <p>A celebration of sustainable fashion and traditional bonds, featuring curated exhibitions of eco-conscious brands and artisanal crafts.</p>
+            <a href="/events/rakhi-edit" class="btn-primary">Explore Event</a>
+          </div>
+        </div>
+        
+        <div class="event-card glass-strong fade-in">
+          <div class="event-image">
+            <img src="https://images.pexels.com/photos/1024967/pexels-photo-1024967.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Upcoming Fashion Event" />
+          </div>
+          <div class="event-content">
+            <h3>Autumn Elegance</h3>
+            <p class="event-date">Coming Soon</p>
+            <p>A sophisticated showcase of autumn fashion trends blending contemporary design with traditional craftsmanship.</p>
+            <a href="/events" class="btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values section-padding">
+    <div class="container">
+      <h2 class="section-title fade-in">Our Values</h2>
+      <div class="values-grid">
+        <div class="value-card glass fade-in">
+          <div class="value-icon">🌱</div>
+          <h3>Sustainability</h3>
+          <p>Promoting eco-conscious brands and sustainable practices in every event we curate.</p>
+        </div>
+        
+        <div class="value-card glass fade-in">
+          <div class="value-icon">✨</div>
+          <h3>Experience Design</h3>
+          <p>Creating immersive, multi-sensory experiences that engage and inspire our attendees.</p>
+        </div>
+        
+        <div class="value-card glass fade-in">
+          <div class="value-icon">🤝</div>
+          <h3>Community Curation</h3>
+          <p>Building meaningful connections between brands, creators, and conscious consumers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6)),
+      url('https://images.pexels.com/photos/1670770/pexels-photo-1670770.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover;
+    filter: blur(1px);
+    z-index: -1;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 120px 0 60px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .tagline {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    color: #667eea;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .about-preview {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .about-content {
+    text-align: center;
+    padding: 60px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .about-content h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #2c2c2c;
+    margin-bottom: 30px;
+  }
+
+  .about-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: #2c2c2c;
+    margin-bottom: 60px;
+  }
+
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .event-card {
+    padding: 0;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(31, 38, 135, 0.3);
+  }
+
+  .event-image {
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .event-card:hover .event-image img {
+    transform: scale(1.05);
+  }
+
+  .event-content {
+    padding: 30px;
+  }
+
+  .event-content h3 {
+    font-size: 1.5rem;
+    color: #2c2c2c;
+    margin-bottom: 10px;
+  }
+
+  .event-date {
+    color: #667eea;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  .event-content p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .value-card {
+    text-align: center;
+    padding: 40px 30px;
+    transition: transform 0.3s ease;
+  }
+
+  .value-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .value-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .value-card h3 {
+    font-size: 1.5rem;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+  }
+
+  .value-card p {
+    color: #666;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      padding: 100px 0 40px;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-content {
+      padding: 40px 20px;
+    }
+
+    .events-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .value-card {
+      padding: 30px 20px;
+    }
+  }
+</style>
+</Layout>

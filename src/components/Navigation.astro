@@ -1,0 +1,179 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="nav-container">
+  <div class="nav-content glass">
+    <div class="logo">
+      <a href="/">
+        <h2>LetsGathr</h2>
+      </a>
+    </div>
+    
+    <div class="nav-links" id="navLinks">
+      <a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a>
+      <a href="/about" class={currentPath === '/about' ? 'active' : ''}>About</a>
+      <a href="/events" class={currentPath === '/events' ? 'active' : ''}>Events</a>
+      <a href="/gallery" class={currentPath === '/gallery' ? 'active' : ''}>Gallery</a>
+      <a href="/contact" class={currentPath === '/contact' ? 'active' : ''}>Contact</a>
+    </div>
+
+    <div class="mobile-menu-btn" id="mobileMenuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+  }
+
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    transition: all 0.3s ease;
+  }
+
+  .logo h2 {
+    color: #2c2c2c;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .logo a {
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: #2c2c2c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #667eea;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #667eea;
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover::after,
+  .nav-links a.active::after {
+    width: 100%;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+  }
+
+  .mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background: #2c2c2c;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 768px) {
+    .nav-container {
+      top: 10px;
+      width: calc(100% - 20px);
+    }
+
+    .nav-content {
+      padding: 12px 20px;
+    }
+
+    .logo h2 {
+      font-size: 24px;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      margin-top: 10px;
+      padding: 20px;
+      flex-direction: column;
+      gap: 15px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileMenuBtn?.addEventListener('click', () => {
+      navLinks?.classList.toggle('active');
+      mobileMenuBtn.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-content')) {
+        navLinks?.classList.remove('active');
+        mobileMenuBtn?.classList.remove('active');
+      }
+    });
+  });
+</script>
