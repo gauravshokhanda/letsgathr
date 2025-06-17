@@ -160,30 +160,31 @@ const RakhiEdit = () => {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section className="py-20 bg-gradient-to-b from-white to-pink-50">
-        <div className="container mx-auto px-4">
-          <h2 className="section-title fade-in-view text-gray-800">Event Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              '6069114',
-              '3727463',
-              '1670766',
-              '1024967',
-              '3735746',
-              '1598505',
-            ].map((id, i) => (
-              <div key={i} className="glass overflow-hidden group fade-in-view">
-                <img
-                  src={`https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=800`}
-                  alt={`Gallery Image ${i + 1}`}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
+  {/* Gallery
+<section className="py-20 bg-gradient-to-b from-white to-pink-50">
+  <div className="container mx-auto px-4">
+    <h2 className="section-title fade-in-view text-gray-800">Event Gallery</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      {[
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPsJmt-sYo7OQlSE68OouhTP7LwC0sdsNbkw&s',
+        'https://5.imimg.com/data5/IR/BH/MO/SELLER-44141435/whatsapp-image-2020-07-06-at-12-26-57-500x500.jpeg',
+        'https://via.placeholder.com/800x600?text=Image+3',
+        'https://via.placeholder.com/800x600?text=Image+4',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYGr80bw__JKaOy6NczHtcbE4B2eX6Lwe2f-o6faZuFx7JnzbDVeKI16YcmL2OuQVg-i4&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSksQYdAisAEHq2lFWq55Y5gUO3z8yB88wGuQ&s',
+      ].map((url, i) => (
+        <div key={i} className="glass overflow-hidden group fade-in-view">
+          <img
+            src={url}
+            alt={`Gallery Image ${i + 1}`}
+            className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section> */}
+
 
       <section className="py-20 bg-white">
   <div className="container mx-auto px-4">
